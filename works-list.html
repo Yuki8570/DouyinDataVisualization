@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>江炜个人号 · 2026年7月 · SunEvo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #132820;
+      --ink-soft: #3a5348;
+      --muted: #6b7f74;
+      --paper: #f2efe6;
+      --paper-2: #e8ece7;
+      --line: rgba(19, 40, 32, 0.12);
+      --teal: #0f6b5c;
+      --teal-deep: #0a4a3f;
+      --lime: #b6e05a;
+      --amber: #c56a1a;
+      --rose: #b84a3a;
+      --white: #fffcf5;
+      --shadow-soft: 0 1px 0 rgba(19, 40, 32, 0.04);
+      --radius: 14px;
+      --font-display: "Syne", "Noto Sans SC", sans-serif;
+      --font-body: "Noto Sans SC", sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--ink);
+      background:
+        radial-gradient(900px 480px at 8% -10%, rgba(182, 224, 90, 0.22), transparent 55%),
+        radial-gradient(700px 420px at 100% 8%, rgba(15, 107, 92, 0.14), transparent 50%),
+        linear-gradient(180deg, #f7f4ec 0%, var(--paper) 40%, #ebe8df 100%);
+      min-height: 100vh;
+      line-height: 1.55;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.35;
+      background-image:
+        linear-gradient(rgba(19, 40, 32, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(19, 40, 32, 0.035) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: linear-gradient(180deg, #000 0%, transparent 85%);
+      z-index: 0;
+    }
+
+    .wrap {
+      position: relative;
+      z-index: 1;
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 36px 0 72px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      animation: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    .reveal:nth-child(1) { animation-delay: 0.05s; }
+    .reveal:nth-child(2) { animation-delay: 0.12s; }
+    .reveal:nth-child(3) { animation-delay: 0.2s; }
+    .reveal:nth-child(4) { animation-delay: 0.28s; }
+    .reveal:nth-child(5) { animation-delay: 0.36s; }
+    .reveal:nth-child(6) { animation-delay: 0.44s; }
+    .reveal:nth-child(7) { animation-delay: 0.52s; }
+    .reveal:nth-child(8) { animation-delay: 0.6s; }
+
+    @keyframes rise {
+      to { opacity: 1; transform: none; }
+    }
+
+    @keyframes barGrow {
+      from { transform: scaleX(0); }
+      to { transform: scaleX(1); }
+    }
+
+    @keyframes countPulse {
+      from { opacity: 0.4; transform: translateY(6px); }
+      to { opacity: 1; transform: none; }
+    }
+
+    header.hero {
+      display: grid;
+      gap: 18px;
+      margin-bottom: 28px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .brand {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(1.75rem, 4vw, 2.6rem);
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+      color: var(--teal-deep);
+    }
+
+    .brand span {
+      color: var(--teal);
+      font-weight: 700;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border: 1px solid var(--line);
+      background: rgba(255, 252, 245, 0.72);
+      border-radius: 999px;
+      font-size: 0.8rem;
+      color: var(--ink-soft);
+      backdrop-filter: blur(6px);
+    }
+
+    .chip strong { color: var(--ink); font-weight: 600; }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: clamp(1.35rem, 2.8vw, 1.85rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      max-width: 18ch;
+    }
+
+    .lede {
+      color: var(--ink-soft);
+      max-width: 52ch;
+      font-size: 0.98rem;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .stat {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px 14px 14px;
+      min-height: 96px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: border-color 0.2s ease, transform 0.25s ease;
+    }
+
+    .stat:hover {
+      border-color: rgba(15, 107, 92, 0.35);
+      transform: translateY(-2px);
+    }
+
+    .stat .val {
+      font-family: var(--font-display);
+      font-size: clamp(1.35rem, 2.4vw, 1.85rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      animation: countPulse 0.6s ease both;
+      color: var(--ink);
+    }
+
+    .stat .val.accent { color: var(--teal); }
+    .stat .val.up { color: #1f7a45; }
+
+    .stat .lbl {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+
+    .stats-secondary {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .insight {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 14px;
+      align-items: start;
+      padding: 18px 20px;
+      background: linear-gradient(135deg, rgba(15, 107, 92, 0.1), rgba(182, 224, 90, 0.12));
+      border: 1px solid rgba(15, 107, 92, 0.18);
+      border-radius: var(--radius);
+      margin-bottom: 28px;
+    }
+
+    .insight-mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: var(--teal);
+      color: var(--lime);
+      display: grid;
+      place-items: center;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+
+    .insight h2 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .insight p {
+      font-size: 0.9rem;
+      color: var(--ink-soft);
+    }
+
+    section.block {
+      margin-bottom: 28px;
+    }
+
+    .section-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .section-head h2 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .section-head p {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .panel {
+      background: rgba(255, 252, 245, 0.82);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 18px;
+      backdrop-filter: blur(8px);
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 16px;
+    }
+
+    .grid-2b {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .bars { display: grid; gap: 10px; }
+
+    .bar-row {
+      display: grid;
+      grid-template-columns: minmax(88px, 120px) 1fr auto;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .bar-label {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--ink-soft);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .bar-track {
+      height: 12px;
+      background: var(--paper-2);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--teal-deep), var(--teal) 55%, #3d9a7f);
+      transform-origin: left center;
+      animation: barGrow 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    .bar-fill.lime {
+      background: linear-gradient(90deg, #7aa82e, var(--lime));
+    }
+
+    .bar-val {
+      font-family: var(--font-display);
+      font-size: 0.82rem;
+      font-weight: 700;
+      min-width: 3.5rem;
+      text-align: right;
+      color: var(--ink);
+    }
+
+    .chart-svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .chart-svg .grid line {
+      stroke: var(--line);
+      stroke-width: 1;
+    }
+
+    .chart-svg .axis {
+      fill: var(--muted);
+      font-size: 11px;
+      font-family: var(--font-body);
+    }
+
+    .chart-svg .line-views {
+      fill: none;
+      stroke: var(--teal);
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .chart-svg .area-views {
+      fill: url(#areaFill);
+      opacity: 0.9;
+    }
+
+    .chart-svg .dot {
+      fill: var(--white);
+      stroke: var(--teal);
+      stroke-width: 2;
+    }
+
+    .chart-svg .line-finish {
+      fill: none;
+      stroke: #1f7a45;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+    }
+
+    .chart-svg .line-bounce {
+      fill: none;
+      stroke: var(--amber);
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-dasharray: 5 4;
+    }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 10px;
+      font-size: 0.78rem;
+      color: var(--ink-soft);
+    }
+
+    .legend i {
+      display: inline-block;
+      width: 18px;
+      height: 3px;
+      border-radius: 2px;
+      vertical-align: middle;
+      margin-right: 6px;
+    }
+
+    .donut-wrap {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .donut-legend {
+      display: grid;
+      gap: 8px;
+      font-size: 0.82rem;
+    }
+
+    .donut-legend div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .swatch {
+      width: 10px;
+      height: 10px;
+      border-radius: 3px;
+      display: inline-block;
+      margin-right: 8px;
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .filter-btn {
+      appearance: none;
+      border: 1px solid var(--line);
+      background: transparent;
+      color: var(--ink-soft);
+      font-family: inherit;
+      font-size: 0.78rem;
+      padding: 6px 12px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+    }
+
+    .filter-btn:hover {
+      border-color: rgba(15, 107, 92, 0.4);
+      color: var(--ink);
+    }
+
+    .filter-btn.active {
+      background: var(--teal);
+      border-color: var(--teal);
+      color: #f5ffe8;
+      font-weight: 600;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--white);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.8rem;
+      min-width: 920px;
+    }
+
+    th, td {
+      padding: 10px 12px;
+      text-align: left;
+      border-bottom: 1px solid var(--line);
+      white-space: nowrap;
+    }
+
+    th {
+      position: sticky;
+      top: 0;
+      background: #eef2ee;
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 0.72rem;
+      letter-spacing: 0.02em;
+      text-transform: none;
+      z-index: 1;
+    }
+
+    td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+
+    td.title {
+      font-weight: 600;
+      max-width: 140px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    tbody tr:nth-child(even) { background: rgba(232, 236, 231, 0.45); }
+    tbody tr:hover { background: rgba(15, 107, 92, 0.06); }
+
+    .dot-tone {
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+    .dot-tone.hi { background: #1f7a45; }
+    .dot-tone.lo { background: var(--amber); }
+
+    .tips {
+      display: grid;
+      gap: 10px;
+      padding: 18px 20px;
+      background: var(--ink);
+      color: #dce8e2;
+      border-radius: var(--radius);
+    }
+
+    .tips h2 {
+      font-family: var(--font-display);
+      color: var(--lime);
+      font-size: 1.05rem;
+      margin-bottom: 4px;
+    }
+
+    .tips ol {
+      padding-left: 1.15rem;
+      display: grid;
+      gap: 8px;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      margin-top: 28px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 8px;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 900px) {
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .stats .stat:last-child { grid-column: 1 / -1; }
+      .stats-secondary { grid-template-columns: repeat(2, 1fr); }
+      .grid-2, .grid-2b { grid-template-columns: 1fr; }
+      .donut-wrap { grid-template-columns: 1fr; justify-items: center; }
+    }
+
+    @media (max-width: 560px) {
+      .wrap { width: calc(100% - 24px); padding-top: 24px; }
+      .bar-row { grid-template-columns: 1fr; gap: 4px; }
+      .bar-val { text-align: left; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal, .bar-fill, .stat .val { animation: none; opacity: 1; transform: none; }
+    }
+  
+    .nav-switch {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+    .nav-switch a {
+      text-decoration: none;
+      color: var(--ink-soft);
+      border: 1px solid var(--line);
+      background: rgba(255, 252, 245, 0.72);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+    }
+    .nav-switch a:hover { border-color: rgba(15,107,92,0.4); color: var(--ink); }
+    .nav-switch a.active {
+      background: var(--teal);
+      border-color: var(--teal);
+      color: #f5ffe8;
+      font-weight: 600;
+    }
+    .topic-tag {
+      display: inline-block;
+      font-size: 0.68rem;
+      padding: 2px 7px;
+      border-radius: 6px;
+      background: rgba(15,107,92,0.1);
+      color: var(--teal-deep);
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <nav class="nav-switch reveal">
+      <a href="index.html">公司号月报</a>
+      <a class="active" href="works-list.html">江炜个人号</a>
+    </nav>
+
+    <header class="hero reveal">
+      <div class="brand-row">
+        <div class="brand">江炜 <span>/ 个人号</span></div>
+        <div class="meta">
+          <span class="chip">抖音 · 个人账号</span>
+          <span class="chip"><strong>2026.07</strong></span>
+          <span class="chip">18 条公开作品</span>
+        </div>
+      </div>
+      <h1>江炜个人号数据可视化</h1>
+      <p class="lede">基于江炜个人账号《作品列表.xlsx》导出，覆盖采购干货、职场段子与新能源内容，汇总播放、互动、完播与涨粉。</p>
+    </header>
+
+    <div class="stats reveal">
+      <div class="stat"><div class="val accent" data-count="130490">0</div><div class="lbl">总播放量</div></div>
+      <div class="stat"><div class="val" data-count="2205">0</div><div class="lbl">总点赞</div></div>
+      <div class="stat"><div class="val" data-count="1794">0</div><div class="lbl">主页访问</div></div>
+      <div class="stat"><div class="val up" data-count="137" data-prefix="+">0</div><div class="lbl">粉丝净增</div></div>
+      <div class="stat"><div class="val" data-count="15.9" data-suffix="%" data-decimals="1">0</div><div class="lbl">加权完播率</div></div>
+    </div>
+
+    <div class="stats-secondary reveal">
+      <div class="stat"><div class="val" data-count="471">0</div><div class="lbl">总分享</div></div>
+      <div class="stat"><div class="val" data-count="334">0</div><div class="lbl">总评论</div></div>
+      <div class="stat"><div class="val" data-count="813">0</div><div class="lbl">总收藏</div></div>
+      <div class="stat"><div class="val" data-count="29.3" data-decimals="1">0</div><div class="lbl">互动 / 千次播放</div></div>
+    </div>
+
+    <aside class="insight reveal">
+      <div class="insight-mark">洞</div>
+      <div>
+        <h2>本月洞察</h2>
+        <p>
+          爆款「今天我来采访，外贸业务员、单证、运营」单条播放 50,369，约占总播放的 <strong>38.6%</strong>，并贡献涨粉 +76、主页访问 703。
+          完播最好的仍是职场段子（如「被员工妈妈安排任务，老板太难了」46.9%）。
+          采购干货条数最多，涨粉效率突出（例：「能长期做采购的人，内心心态」+9、「太阳能组件验货保姆级教程」+8）。
+        </p>
+      </div>
+    </aside>
+
+    <section class="block reveal">
+      <div class="section-head">
+        <h2>播放量排行</h2>
+        <p>按作品 · 单位：次</p>
+      </div>
+      <div class="panel">
+        <div class="bars" id="viewBars"></div>
+      </div>
+    </section>
+
+    <section class="block reveal">
+      <div class="grid-2">
+        <div>
+          <div class="section-head">
+            <h2>发布节奏与播放趋势</h2>
+            <p>按发布时间 · 播放量（次）</p>
+          </div>
+          <div class="panel">
+            <svg class="chart-svg" id="trendChart" viewBox="0 0 560 220" role="img" aria-label="播放趋势折线图"></svg>
+          </div>
+        </div>
+        <div>
+          <div class="section-head">
+            <h2>完播率 vs 2s 跳出</h2>
+            <p>百分比</p>
+          </div>
+          <div class="panel">
+            <svg class="chart-svg" id="rateChart" viewBox="0 0 400 220" role="img" aria-label="完播率与跳出率对比"></svg>
+            <div class="legend">
+              <span><i style="background:#1f7a45"></i>完播率</span>
+              <span><i style="background:#c56a1a; height:2px; border-top:2px dashed #c56a1a; background:transparent"></i>2s 跳出率</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block reveal">
+      <div class="grid-2b">
+        <div>
+          <div class="section-head">
+            <h2>题材结构</h2>
+            <p>按作品数 · 采购 / 段子 / 新能源</p>
+          </div>
+          <div class="panel">
+            <div class="donut-wrap">
+              <svg width="160" height="160" viewBox="0 0 160 160" id="topicDonut" aria-label="题材分布"></svg>
+              <div class="donut-legend" id="topicLegend"></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="section-head">
+            <h2>体裁分布</h2>
+            <p>作品数量</p>
+          </div>
+          <div class="panel">
+            <div class="donut-wrap">
+              <svg width="160" height="160" viewBox="0 0 160 160" id="genreDonut" aria-label="体裁分布"></svg>
+              <div class="donut-legend" id="genreLegend"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block reveal">
+      <div class="grid-2b">
+        <div>
+          <div class="section-head">
+            <h2>互动构成</h2>
+            <p>赞 / 转 / 评 / 藏合计 3,823</p>
+          </div>
+          <div class="panel">
+            <div class="donut-wrap">
+              <svg width="160" height="160" viewBox="0 0 160 160" id="engageDonut" aria-label="互动构成"></svg>
+              <div class="donut-legend" id="engageLegend"></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="section-head">
+            <h2>题材播放贡献</h2>
+            <p>各题材播放量合计</p>
+          </div>
+          <div class="panel">
+            <div class="bars" id="topicBars"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block reveal">
+      <div class="section-head">
+        <h2>主页访问与涨粉</h2>
+        <p>按播放量排序 · 涨粉条按 ×8 缩放便于对比</p>
+      </div>
+      <div class="panel">
+        <div class="bars" id="profileBars"></div>
+        <div class="legend" style="margin-top:14px">
+          <span><i style="background:var(--teal); height:8px; width:14px; border-radius:3px"></i>主页访问</span>
+          <span><i style="background:var(--lime); height:8px; width:14px; border-radius:3px"></i>粉丝增量 × 8</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="block reveal">
+      <div class="section-head">
+        <h2>作品明细</h2>
+        <div class="filters" id="sortFilters"></div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>作品</th>
+              <th>题材</th>
+              <th>日期</th>
+              <th>体裁</th>
+              <th class="num">播放</th>
+              <th class="num">完播率</th>
+              <th class="num">5s完播</th>
+              <th class="num">2s跳出</th>
+              <th class="num">均播时长</th>
+              <th class="num">点赞</th>
+              <th class="num">分享</th>
+              <th class="num">评论</th>
+              <th class="num">收藏</th>
+              <th class="num">主页</th>
+              <th class="num">涨粉</th>
+              <th class="num">互动/千次</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+      <p style="margin-top:10px;font-size:0.75rem;color:var(--muted)">
+        绿色圆点：播放 ≥ 8,000 · 橙色圆点：播放 &lt; 1,200 · 互动/千次 = (赞+转+评+藏) / 播放 × 1000
+      </p>
+    </section>
+
+    <section class="tips reveal">
+      <h2>建议方向</h2>
+      <ol>
+        <li>岗位职责 / 入行指南类内容具备爆款潜力，可做成系列（采购入行、外贸入行、单证入行）持续复用结构。</li>
+        <li>职场段子完播与分享更好，适合做账号打开率；采购干货涨粉效率高，适合穿插做转化与人设沉淀。</li>
+        <li>长视频干货（3–5min）播放偏弱，优先压缩成 1min 钩子版，完整版放主页或合集。</li>
+      </ol>
+    </section>
+
+    <footer>
+      <span>数据来源：江炜个人号 · 作品列表.xlsx · 2026年7月</span>
+      <span>单文件 HTML · 可与公司号月报对照查看</span>
+    </footer>
+  </div>
+
+  <script>
+    const POSTS = [
+  {
+    "title": "采购合同全陷阱拆解！标的、付款、交付",
+    "fullTitle": "采购合同全陷阱拆解！标的、付款、交付、验收四大板块避坑指南 #SunEvo #采购合同避坑 #供应链风控干货 #采购职场干货 #采购风险管控",
+    "date": "07-30",
+    "genre": "1-3min视频",
+    "views": 569,
+    "finishRate": 0.008333,
+    "finish5s": 0.299694,
+    "bounce2s": 0.392966,
+    "avgWatchSec": 9.348624,
+    "likes": 8,
+    "shares": 1,
+    "comments": 6,
+    "favorites": 1,
+    "profileVisits": 23,
+    "followerDelta": 0,
+    "topic": "采购干货"
+  },
+  {
+    "title": "建立共赢供应商生态，做好战略、组织、",
+    "fullTitle": "建立共赢供应商生态，做好战略、组织、体系三层管理就够了 #SunEvo #供应商管理干货 #采购供应链管理 #企业供应链优化 #采购职场干货",
+    "date": "07-28",
+    "genre": "3-5min视频",
+    "views": 3588,
+    "finishRate": 0.005372,
+    "finish5s": 0.357887,
+    "bounce2s": 0.340361,
+    "avgWatchSec": 11.306873,
+    "likes": 26,
+    "shares": 0,
+    "comments": 3,
+    "favorites": 6,
+    "profileVisits": 20,
+    "followerDelta": 2,
+    "topic": "采购干货"
+  },
+  {
+    "title": "公司业务都是这样的，应该怎么破",
+    "fullTitle": "公司业务都是这样的，应该怎么破 #SunEvo #外贸业务员日常 #销售真实状态 #打工人幻想时刻 #职场搞笑日常",
+    "date": "07-26",
+    "genre": "1min-视频",
+    "views": 2251,
+    "finishRate": 0.367148,
+    "finish5s": 0.548815,
+    "bounce2s": 0.248694,
+    "avgWatchSec": 7.58417,
+    "likes": 26,
+    "shares": 2,
+    "comments": 7,
+    "favorites": 2,
+    "profileVisits": 25,
+    "followerDelta": 1,
+    "topic": "职场段子"
+  },
+  {
+    "title": "企业公务用车纠结！接待客户选问界M9",
+    "fullTitle": "企业公务用车纠结！接待客户选问界M9合适吗？大家给点建议 #SunEvo #企业商务车选购 #问界M9 #公司公务用车 #新能源商务接待",
+    "date": "07-25",
+    "genre": "1min-视频",
+    "views": 2405,
+    "finishRate": 0.170784,
+    "finish5s": 0.514137,
+    "bounce2s": 0.265625,
+    "avgWatchSec": 16.787946,
+    "likes": 25,
+    "shares": 1,
+    "comments": 69,
+    "favorites": 0,
+    "profileVisits": 76,
+    "followerDelta": 1,
+    "topic": "其他"
+  },
+  {
+    "title": "越厉害的采购，越懂凡事留证据！是规避",
+    "fullTitle": "越厉害的采购，越懂凡事留证据！是规避职场追责的关键 #SunEvo #采购干货 #采购留痕避坑 #供应链职场 #采购自我保护",
+    "date": "07-23",
+    "genre": "1-3min视频",
+    "views": 1871,
+    "finishRate": 0.015128,
+    "finish5s": 0.394495,
+    "bounce2s": 0.289715,
+    "avgWatchSec": 14.47127,
+    "likes": 44,
+    "shares": 1,
+    "comments": 3,
+    "favorites": 11,
+    "profileVisits": 31,
+    "followerDelta": 4,
+    "topic": "采购干货"
+  },
+  {
+    "title": "搞懂组件功率差距！四分片 vs 半片",
+    "fullTitle": "搞懂组件功率差距！四分片 vs 半片，发电效率差异底层原理 #SunEvo #太阳能组件 #四分片光伏技术 #太阳能电池片 #新能源干货",
+    "date": "07-21",
+    "genre": "3-5min视频",
+    "views": 841,
+    "finishRate": 0.030973,
+    "finish5s": 0.37904,
+    "bounce2s": 0.306562,
+    "avgWatchSec": 15.265885,
+    "likes": 17,
+    "shares": 0,
+    "comments": 10,
+    "favorites": 2,
+    "profileVisits": 36,
+    "followerDelta": 1,
+    "topic": "新能源干货"
+  },
+  {
+    "title": "员工花式拒绝加班，一招换位拿捏老板",
+    "fullTitle": "员工花式拒绝加班，一招换位拿捏老板 #SunEvo #办公室搞笑段子 #打工人神操作 #职场反转名场面 #老板日常",
+    "date": "07-19",
+    "genre": "1min-视频",
+    "views": 10906,
+    "finishRate": 0.437044,
+    "finish5s": 0.599094,
+    "bounce2s": 0.210929,
+    "avgWatchSec": 17.67148,
+    "likes": 94,
+    "shares": 15,
+    "comments": 4,
+    "favorites": 3,
+    "profileVisits": 70,
+    "followerDelta": 1,
+    "topic": "职场段子"
+  },
+  {
+    "title": "被员工妈妈安排任务，老板太难了",
+    "fullTitle": "被员工妈妈安排任务，老板太难了 #SunEvo #办公室搞笑日常 #打工人趣事 #老板的日常 #轻松段子",
+    "date": "07-18",
+    "genre": "1min-视频",
+    "views": 11990,
+    "finishRate": 0.469351,
+    "finish5s": 0.669977,
+    "bounce2s": 0.192012,
+    "avgWatchSec": 11.101116,
+    "likes": 138,
+    "shares": 15,
+    "comments": 18,
+    "favorites": 2,
+    "profileVisits": 254,
+    "followerDelta": 2,
+    "topic": "职场段子"
+  },
+  {
+    "title": "太阳能组件验货保姆级教程，完整验货步",
+    "fullTitle": "太阳能组件验货保姆级教程，完整验货步骤，新手也能直接上手操作 #SunEvo #太阳能组件验货 #光伏采购干货 #光伏外贸质检 #新能源采购经验",
+    "date": "07-16",
+    "genre": "1-3min视频",
+    "views": 1466,
+    "finishRate": 0.034997,
+    "finish5s": 0.403217,
+    "bounce2s": 0.320577,
+    "avgWatchSec": 21.249307,
+    "likes": 26,
+    "shares": 4,
+    "comments": 12,
+    "favorites": 11,
+    "profileVisits": 89,
+    "followerDelta": 8,
+    "topic": "采购干货"
+  },
+  {
+    "title": "忙完工作偷闲片刻，每天下午半个小时休",
+    "fullTitle": "忙完工作偷闲片刻，每天下午半个小时休息时间 #SunEvo #公司日常vlog #办公室休息碎片 #打工人治愈日常 #企业实拍",
+    "date": "07-14",
+    "genre": "1-3min视频",
+    "views": 519,
+    "finishRate": 0.079137,
+    "finish5s": 0.393539,
+    "bounce2s": 0.36417,
+    "avgWatchSec": 17.528634,
+    "likes": 13,
+    "shares": 0,
+    "comments": 8,
+    "favorites": 1,
+    "profileVisits": 39,
+    "followerDelta": 0,
+    "topic": "职场段子"
+  },
+  {
+    "title": "为啥采购总偏向供应商？3 个底层逻辑",
+    "fullTitle": "为啥采购总偏向供应商？3 个底层逻辑解开所有人误解 #SunEvo #采购干货 #供应商管理 #供应链职场 #采购真实心声",
+    "date": "07-12",
+    "genre": "1min-视频",
+    "views": 9757,
+    "finishRate": 0.044684,
+    "finish5s": 0.477467,
+    "bounce2s": 0.224472,
+    "avgWatchSec": 14.072447,
+    "likes": 54,
+    "shares": 5,
+    "comments": 14,
+    "favorites": 4,
+    "profileVisits": 40,
+    "followerDelta": 3,
+    "topic": "采购干货"
+  },
+  {
+    "title": "能长期做采购的人，内心心态早就被现实",
+    "fullTitle": "能长期做采购的人，内心心态早就被现实磨出来了 #SunEvo #采购干货 #采购职场心得 #供应链打工人 #职场心态修炼",
+    "date": "07-11",
+    "genre": "1-3min视频",
+    "views": 6299,
+    "finishRate": 0.03084,
+    "finish5s": 0.467557,
+    "bounce2s": 0.274786,
+    "avgWatchSec": 13.955304,
+    "likes": 73,
+    "shares": 13,
+    "comments": 40,
+    "favorites": 15,
+    "profileVisits": 72,
+    "followerDelta": 9,
+    "topic": "采购干货"
+  },
+  {
+    "title": "我发现一个员工上班摸鱼，这样的员工还",
+    "fullTitle": "我发现一个员工上班摸鱼，这样的员工还能不能要 #SunEvo #上班摸鱼名场面 #办公室搞笑日常 #打工人搞笑瞬间 #职场趣事",
+    "date": "07-09",
+    "genre": "1min-视频",
+    "views": 7381,
+    "finishRate": 0.291495,
+    "finish5s": 0.632117,
+    "bounce2s": 0.170446,
+    "avgWatchSec": 12.292704,
+    "likes": 26,
+    "shares": 10,
+    "comments": 5,
+    "favorites": 2,
+    "profileVisits": 77,
+    "followerDelta": 2,
+    "topic": "职场段子"
+  },
+  {
+    "title": "今天我来采访，外贸业务员、单证、运营",
+    "fullTitle": "今天我来采访，外贸业务员、单证、运营、技术岗位职责全梳理 #SunEvo #外贸业务员  #外贸 #外贸入行指南 #跨境职场",
+    "date": "07-07",
+    "genre": "1min-视频",
+    "views": 50369,
+    "finishRate": 0.10154,
+    "finish5s": 0.517764,
+    "bounce2s": 0.326209,
+    "avgWatchSec": 14.557104,
+    "likes": 1321,
+    "shares": 388,
+    "comments": 50,
+    "favorites": 696,
+    "profileVisits": 703,
+    "followerDelta": 76,
+    "topic": "其他"
+  },
+  {
+    "title": "采购赚钱核心思维：普通采购解决问题，",
+    "fullTitle": "采购赚钱核心思维：普通采购解决问题，优秀采购掌控局面 #SunEvo #采购干货 #采购职业思维 #供应链职场 #打工人搞钱思路",
+    "date": "07-05",
+    "genre": "1-3min视频",
+    "views": 3731,
+    "finishRate": 0.020693,
+    "finish5s": 0.369533,
+    "bounce2s": 0.330268,
+    "avgWatchSec": 14.41842,
+    "likes": 56,
+    "shares": 2,
+    "comments": 9,
+    "favorites": 26,
+    "profileVisits": 48,
+    "followerDelta": 7,
+    "topic": "采购干货"
+  },
+  {
+    "title": "什么样的人适合做采购？六大核心特质，",
+    "fullTitle": "什么样的人适合做采购？六大核心特质，最后一点决定职业高度 #SunEvo #采购干货 #采购入行 #供应链职场 #职场识人",
+    "date": "07-04",
+    "genre": "1-3min视频",
+    "views": 1177,
+    "finishRate": 0.051089,
+    "finish5s": 0.432494,
+    "bounce2s": 0.31045,
+    "avgWatchSec": 15.085431,
+    "likes": 22,
+    "shares": 1,
+    "comments": 9,
+    "favorites": 8,
+    "profileVisits": 19,
+    "followerDelta": 2,
+    "topic": "采购干货"
+  },
+  {
+    "title": "光伏储能人必看！全球储能电池市场现状",
+    "fullTitle": "光伏储能人必看！全球储能电池市场现状、出口机遇与风险解读 #SunEvo #储能电池全球行情 #太阳能储能 #储能出海 #新能源行业解读",
+    "date": "07-03",
+    "genre": "3-5min视频",
+    "views": 3732,
+    "finishRate": 0.020638,
+    "finish5s": 0.371839,
+    "bounce2s": 0.285573,
+    "avgWatchSec": 19.648558,
+    "likes": 24,
+    "shares": 3,
+    "comments": 14,
+    "favorites": 7,
+    "profileVisits": 98,
+    "followerDelta": 7,
+    "topic": "新能源干货"
+  },
+  {
+    "title": "宁德时代开通线上商城，电芯价格直接公",
+    "fullTitle": "宁德时代开通线上商城，电芯价格直接公开透明？ #宁德时代 #电芯 #恒创新能源 #新能源 #SunEvo",
+    "date": "07-02",
+    "genre": "1min-视频",
+    "views": 11638,
+    "finishRate": 0.070085,
+    "finish5s": 0.464411,
+    "bounce2s": 0.311155,
+    "avgWatchSec": 16.878966,
+    "likes": 212,
+    "shares": 10,
+    "comments": 53,
+    "favorites": 16,
+    "profileVisits": 74,
+    "followerDelta": 11,
+    "topic": "新能源干货"
+  }
+];
+
+    const fmt = (n) => n.toLocaleString("zh-CN");
+    const pct = (n) => (n * 100).toFixed(1) + "%";
+    const eng = (p) => ((p.likes + p.shares + p.comments + p.favorites) / p.views) * 1000;
+
+    function sortPosts(key) {
+      const list = [...POSTS];
+      if (key === "views") return list.sort((a, b) => b.views - a.views);
+      if (key === "engage") return list.sort((a, b) => eng(b) - eng(a));
+      if (key === "finish") return list.sort((a, b) => b.finishRate - a.finishRate);
+      if (key === "profile") return list.sort((a, b) => b.profileVisits - a.profileVisits);
+      if (key === "fans") return list.sort((a, b) => b.followerDelta - a.followerDelta);
+      return list.sort((a, b) => a.date.localeCompare(b.date));
+    }
+
+    function animateCounts() {
+      document.querySelectorAll("[data-count]").forEach((el) => {
+        const target = parseFloat(el.dataset.count);
+        const decimals = parseInt(el.dataset.decimals || "0", 10);
+        const prefix = el.dataset.prefix || "";
+        const suffix = el.dataset.suffix || "";
+        const start = performance.now();
+        const dur = 900;
+        const tick = (now) => {
+          const t = Math.min(1, (now - start) / dur);
+          const eased = 1 - Math.pow(1 - t, 3);
+          const val = target * eased;
+          el.textContent = prefix + (decimals ? val.toFixed(decimals) : fmt(Math.round(val))) + suffix;
+          if (t < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      });
+    }
+
+    function renderBars() {
+      const byViews = sortPosts("views");
+      const max = byViews[0].views;
+      document.getElementById("viewBars").innerHTML = byViews.map((p, i) => `
+        <div class="bar-row" title="${p.fullTitle.replace(/"/g, "&quot;")}">
+          <div class="bar-label">${p.title}</div>
+          <div class="bar-track"><div class="bar-fill" style="width:${(p.views / max) * 100}%; animation-delay:${i * 0.04}s"></div></div>
+          <div class="bar-val">${fmt(p.views)}</div>
+        </div>
+      `).join("");
+
+      const topicMap = {};
+      POSTS.forEach((p) => { topicMap[p.topic] = (topicMap[p.topic] || 0) + p.views; });
+      const topicEntries = Object.entries(topicMap).sort((a, b) => b[1] - a[1]);
+      const tmax = topicEntries[0][1];
+      document.getElementById("topicBars").innerHTML = topicEntries.map(([name, v], i) => `
+        <div class="bar-row">
+          <div class="bar-label">${name}</div>
+          <div class="bar-track"><div class="bar-fill" style="width:${(v / tmax) * 100}%; animation-delay:${i * 0.06}s"></div></div>
+          <div class="bar-val">${fmt(v)}</div>
+        </div>
+      `).join("");
+
+      const maxP = Math.max(...byViews.map((p) => p.profileVisits));
+      document.getElementById("profileBars").innerHTML = byViews.map((p, i) => `
+        <div class="bar-row">
+          <div class="bar-label">${p.title}</div>
+          <div class="bar-track" style="display:grid; gap:3px; height:auto; background:transparent; overflow:visible">
+            <div class="bar-track"><div class="bar-fill" style="width:${maxP ? (p.profileVisits / maxP) * 100 : 0}%; animation-delay:${i * 0.03}s"></div></div>
+            <div class="bar-track"><div class="bar-fill lime" style="width:${(p.followerDelta * 8 / Math.max(maxP, 1)) * 100}%; animation-delay:${0.08 + i * 0.03}s"></div></div>
+          </div>
+          <div class="bar-val">${p.profileVisits} / +${p.followerDelta}</div>
+        </div>
+      `).join("");
+    }
+
+    function linePath(points) {
+      return points.map((p, i) => (i === 0 ? `M ${p.x} ${p.y}` : `L ${p.x} ${p.y}`)).join(" ");
+    }
+    function areaPath(points, baselineY) {
+      if (!points.length) return "";
+      return `${linePath(points)} L ${points[points.length - 1].x} ${baselineY} L ${points[0].x} ${baselineY} Z`;
+    }
+
+    function renderTrend() {
+      const chrono = sortPosts("date");
+      const svg = document.getElementById("trendChart");
+      const W = 560, H = 220, pad = { t: 16, r: 16, b: 36, l: 52 };
+      const iw = W - pad.l - pad.r, ih = H - pad.t - pad.b;
+      const maxV = Math.max(...chrono.map((p) => p.views)) * 1.08;
+      const pts = chrono.map((p, i) => ({
+        x: pad.l + (i / (chrono.length - 1)) * iw,
+        y: pad.t + ih - (p.views / maxV) * ih,
+        label: p.date,
+        v: p.views,
+      }));
+      let grid = "";
+      for (let i = 0; i <= 4; i++) {
+        const y = pad.t + (ih * i) / 4;
+        const val = Math.round(maxV * (1 - i / 4));
+        grid += `<line x1="${pad.l}" y1="${y}" x2="${W - pad.r}" y2="${y}" /><text class="axis" x="${pad.l - 8}" y="${y + 4}" text-anchor="end">${fmt(val)}</text>`;
+      }
+      const labels = pts.map((p, i) => (i % 2 === 0 || i === pts.length - 1) ? `<text class="axis" x="${p.x}" y="${H - 12}" text-anchor="middle">${p.label}</text>` : "").join("");
+      const dots = pts.map((p) => `<circle class="dot" cx="${p.x}" cy="${p.y}" r="3.5"><title>${p.label}: ${fmt(p.v)}</title></circle>`).join("");
+      svg.innerHTML = `
+        <defs>
+          <linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#0f6b5c" stop-opacity="0.28"/>
+            <stop offset="100%" stop-color="#0f6b5c" stop-opacity="0.02"/>
+          </linearGradient>
+        </defs>
+        <g class="grid">${grid}</g>
+        <path class="area-views" d="${areaPath(pts, pad.t + ih)}" />
+        <path class="line-views" d="${linePath(pts)}" />
+        ${dots}${labels}
+      `;
+    }
+
+    function renderRates() {
+      const chrono = sortPosts("date");
+      const svg = document.getElementById("rateChart");
+      const W = 400, H = 220, pad = { t: 16, r: 12, b: 36, l: 40 };
+      const iw = W - pad.l - pad.r, ih = H - pad.t - pad.b;
+      const max = 70;
+      const toPts = (getter) => chrono.map((p, i) => ({
+        x: pad.l + (i / (chrono.length - 1)) * iw,
+        y: pad.t + ih - (getter(p) * 100 / max) * ih,
+        label: p.date,
+      }));
+      const finish = toPts((p) => p.finishRate);
+      const bounce = toPts((p) => p.bounce2s);
+      let grid = "";
+      for (let i = 0; i <= 4; i++) {
+        const y = pad.t + (ih * i) / 4;
+        const val = Math.round(max * (1 - i / 4));
+        grid += `<line x1="${pad.l}" y1="${y}" x2="${W - pad.r}" y2="${y}" stroke="rgba(19,40,32,0.12)" /><text class="axis" x="${pad.l - 6}" y="${y + 4}" text-anchor="end">${val}%</text>`;
+      }
+      const labels = finish.map((p, i) => (i % 2 === 0 || i === finish.length - 1) ? `<text class="axis" x="${p.x}" y="${H - 12}" text-anchor="middle">${p.label}</text>` : "").join("");
+      svg.innerHTML = `${grid}<path class="line-finish" d="${linePath(finish)}" /><path class="line-bounce" d="${linePath(bounce)}" />${labels}`;
+    }
+
+    function renderDonut(svgId, legendId, items, colors) {
+      const svg = document.getElementById(svgId);
+      const legend = document.getElementById(legendId);
+      const total = items.reduce((s, x) => s + x.value, 0);
+      const cx = 80, cy = 80, r = 58, stroke = 22;
+      let angle = -Math.PI / 2;
+      const arcs = items.map((item, i) => {
+        const slice = (item.value / total) * Math.PI * 2;
+        const a1 = angle, a2 = angle + slice;
+        angle = a2;
+        const large = slice > Math.PI ? 1 : 0;
+        const x1 = cx + r * Math.cos(a1), y1 = cy + r * Math.sin(a1);
+        const x2 = cx + r * Math.cos(a2), y2 = cy + r * Math.sin(a2);
+        return `<path d="M ${x1} ${y1} A ${r} ${r} 0 ${large} 1 ${x2} ${y2}" fill="none" stroke="${colors[i]}" stroke-width="${stroke}"><title>${item.label}: ${item.value}</title></path>`;
+      }).join("");
+      svg.innerHTML = `
+        <circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="#e4ebe7" stroke-width="${stroke}" />
+        ${arcs}
+        <text x="${cx}" y="${cy - 4}" text-anchor="middle" font-family="Syne, sans-serif" font-size="20" font-weight="700" fill="#132820">${total}</text>
+        <text x="${cx}" y="${cy + 14}" text-anchor="middle" font-size="11" fill="#6b7f74">合计</text>
+      `;
+      legend.innerHTML = items.map((item, i) => `
+        <div>
+          <span><span class="swatch" style="background:${colors[i]}"></span>${item.label}</span>
+          <strong>${item.value}（${((item.value / total) * 100).toFixed(0)}%）</strong>
+        </div>
+      `).join("");
+    }
+
+    let sortKey = "views";
+
+    function renderTable() {
+      const rows = sortPosts(sortKey);
+      document.getElementById("tableBody").innerHTML = rows.map((p) => {
+        const tone = p.views >= 8000 ? "hi" : p.views < 1200 ? "lo" : "";
+        const dot = tone ? `<span class="dot-tone ${tone}"></span>` : "";
+        return `<tr>
+          <td class="title" title="${p.fullTitle.replace(/"/g, "&quot;")}">${dot}${p.title}</td>
+          <td>${p.topic}</td>
+          <td>${p.date}</td>
+          <td>${p.genre}</td>
+          <td class="num">${fmt(p.views)}</td>
+          <td class="num">${pct(p.finishRate)}</td>
+          <td class="num">${pct(p.finish5s)}</td>
+          <td class="num">${pct(p.bounce2s)}</td>
+          <td class="num">${p.avgWatchSec.toFixed(1)}s</td>
+          <td class="num">${p.likes}</td>
+          <td class="num">${p.shares}</td>
+          <td class="num">${p.comments}</td>
+          <td class="num">${p.favorites}</td>
+          <td class="num">${p.profileVisits}</td>
+          <td class="num">${p.followerDelta > 0 ? "+" + p.followerDelta : p.followerDelta}</td>
+          <td class="num">${eng(p).toFixed(1)}</td>
+        </tr>`;
+      }).join("");
+    }
+
+    function renderFilters() {
+      const opts = [
+        ["views", "按播放"],
+        ["engage", "按互动率"],
+        ["finish", "按完播"],
+        ["fans", "按涨粉"],
+        ["profile", "按主页"],
+        ["date", "按时间"],
+      ];
+      const root = document.getElementById("sortFilters");
+      root.innerHTML = opts.map(([k, label]) =>
+        `<button class="filter-btn${sortKey === k ? " active" : ""}" data-sort="${k}">${label}</button>`
+      ).join("");
+      root.querySelectorAll("button").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          sortKey = btn.dataset.sort;
+          renderFilters();
+          renderTable();
+        });
+      });
+    }
+
+    animateCounts();
+    renderBars();
+    renderTrend();
+    renderRates();
+    renderDonut("topicDonut", "topicLegend", [
+      { label: "采购干货", value: 8 },
+      { label: "职场段子", value: 5 },
+      { label: "新能源干货", value: 3 },
+      { label: "其他", value: 2 },
+    ].filter((x) => x.value > 0), ["#0f6b5c", "#c56a1a", "#7aa82e", "#8a9a90"]);
+    renderDonut("genreDonut", "genreLegend", [
+      { label: "1min-视频", value: 8 },
+      { label: "1-3min视频", value: 7 },
+      { label: "3-5min视频", value: 3 },
+    ].filter((x) => x.value > 0), ["#0a4a3f", "#b6e05a", "#6b7f74"]);
+    renderDonut("engageDonut", "engageLegend", [
+      { label: "点赞", value: 2205 },
+      { label: "分享", value: 471 },
+      { label: "评论", value: 334 },
+      { label: "收藏", value: 813 },
+    ], ["#0f6b5c", "#3d9a7f", "#c56a1a", "#8a9a90"]);
+    renderFilters();
+    renderTable();
+  </script>
+</body>
+</html>
