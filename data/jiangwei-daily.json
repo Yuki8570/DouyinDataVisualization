@@ -1,0 +1,644 @@
+{
+  "jiangwei_douyin": {
+    "8月数据": [
+      {
+        "date": "2026-08-05",
+        "posts": 1,
+        "views": 4067,
+        "likes": 102,
+        "shares": 29,
+        "comments": 11,
+        "finish5s": 0.5719,
+        "bounce2s": 0.3691,
+        "coverCtr": 0.3618,
+        "avgWatchSec": 16.62
+      },
+      {
+        "date": "2026-08-06",
+        "posts": 0,
+        "views": 6229,
+        "likes": 143,
+        "shares": 41,
+        "comments": 8,
+        "finish5s": 0.578,
+        "bounce2s": 0.3488,
+        "coverCtr": 0.1672,
+        "avgWatchSec": 17.66
+      },
+      {
+        "date": "2026-08-07",
+        "posts": 1,
+        "views": 1865,
+        "likes": 59,
+        "shares": 12,
+        "comments": 7,
+        "finish5s": 0.5615,
+        "bounce2s": 0.3566,
+        "coverCtr": 0.6667000000000001,
+        "avgWatchSec": 18.84
+      },
+      {
+        "date": "2026-08-08",
+        "posts": 0,
+        "views": 1374,
+        "likes": 39,
+        "shares": 9,
+        "comments": 1,
+        "finish5s": 0.5552,
+        "bounce2s": 0.3567,
+        "coverCtr": 1.0,
+        "avgWatchSec": 18.61
+      },
+      {
+        "date": "2026-08-09",
+        "posts": 0,
+        "views": 2047,
+        "likes": 45,
+        "shares": 14,
+        "comments": 2,
+        "finish5s": 0.6117,
+        "bounce2s": 0.34009999999999996,
+        "coverCtr": 0.7143,
+        "avgWatchSec": 19.18
+      },
+      {
+        "date": "2026-08-10",
+        "posts": 1,
+        "views": 1951,
+        "likes": 43,
+        "shares": 14,
+        "comments": 6,
+        "finish5s": 0.5181,
+        "bounce2s": 0.40490000000000004,
+        "coverCtr": 0.31670000000000004,
+        "avgWatchSec": 15.82
+      },
+      {
+        "date": "2026-08-11",
+        "posts": 1,
+        "views": 1199,
+        "likes": 30,
+        "shares": 5,
+        "comments": -1,
+        "finish5s": 0.5471,
+        "bounce2s": 0.45049999999999996,
+        "coverCtr": 0.2778,
+        "avgWatchSec": 19.45
+      },
+      {
+        "date": "2026-08-12",
+        "posts": 0,
+        "views": 1351,
+        "likes": 23,
+        "shares": 10,
+        "comments": 2,
+        "finish5s": 0.5626,
+        "bounce2s": 0.37439999999999996,
+        "coverCtr": 1.0,
+        "avgWatchSec": 15.69
+      },
+      {
+        "date": "2026-08-13",
+        "posts": 1,
+        "views": 475,
+        "likes": 7,
+        "shares": 0,
+        "comments": 0,
+        "finish5s": 0.355,
+        "bounce2s": 0.4475,
+        "coverCtr": 0.125,
+        "avgWatchSec": 13.14
+      },
+      {
+        "date": "2026-08-14",
+        "posts": 0,
+        "views": 882,
+        "likes": 14,
+        "shares": 5,
+        "comments": 1,
+        "finish5s": 0.535,
+        "bounce2s": 0.3973,
+        "coverCtr": 0.1,
+        "avgWatchSec": 18.99
+      },
+      {
+        "date": "2026-08-15",
+        "posts": 1,
+        "views": 840,
+        "likes": 13,
+        "shares": 5,
+        "comments": 0,
+        "finish5s": 0.4207,
+        "bounce2s": 0.41479999999999995,
+        "coverCtr": 0.4286,
+        "avgWatchSec": 12.43
+      },
+      {
+        "date": "2026-08-16",
+        "posts": 0,
+        "views": 284,
+        "likes": 5,
+        "shares": 0,
+        "comments": 0,
+        "finish5s": 0.4658,
+        "bounce2s": 0.42469999999999997,
+        "coverCtr": 0.0,
+        "avgWatchSec": 16.08
+      },
+      {
+        "date": "2026-08-17",
+        "posts": 1,
+        "views": 439,
+        "likes": 8,
+        "shares": 1,
+        "comments": 0,
+        "finish5s": 0.3458,
+        "bounce2s": 0.3925,
+        "coverCtr": 0.5,
+        "avgWatchSec": 10.13
+      },
+      {
+        "date": "2026-08-18",
+        "posts": 0,
+        "views": 138,
+        "likes": 3,
+        "shares": 1,
+        "comments": 0,
+        "finish5s": 0.3188,
+        "bounce2s": 0.4203,
+        "coverCtr": 1.0,
+        "avgWatchSec": 10.38
+      },
+      {
+        "date": "2026-08-19",
+        "posts": 1,
+        "views": 633,
+        "likes": 8,
+        "shares": 0,
+        "comments": 2,
+        "finish5s": 0.35100000000000003,
+        "bounce2s": 0.4727,
+        "coverCtr": 0.07690000000000001,
+        "avgWatchSec": 8.69
+      },
+      {
+        "date": "2026-08-20",
+        "posts": 0,
+        "views": 217,
+        "likes": 1,
+        "shares": 0,
+        "comments": 0,
+        "finish5s": 0.3239,
+        "bounce2s": 0.507,
+        "coverCtr": 1.0,
+        "avgWatchSec": 10.75
+      },
+      {
+        "date": "2026-08-21",
+        "posts": 1,
+        "views": 589,
+        "likes": 23,
+        "shares": 2,
+        "comments": 3,
+        "finish5s": 0.562,
+        "bounce2s": 0.36840000000000006,
+        "coverCtr": 0.1333,
+        "avgWatchSec": 15.2
+      },
+      {
+        "date": "2026-08-22",
+        "posts": 0,
+        "views": 428,
+        "likes": 5,
+        "shares": 3,
+        "comments": 0,
+        "finish5s": 0.5421,
+        "bounce2s": 0.39490000000000003,
+        "coverCtr": 0.1591,
+        "avgWatchSec": 15.36
+      },
+      {
+        "date": "2026-08-23",
+        "posts": 1,
+        "views": 241,
+        "likes": 2,
+        "shares": 0,
+        "comments": 0,
+        "finish5s": 0.4403,
+        "bounce2s": 0.4979,
+        "coverCtr": 0.8,
+        "avgWatchSec": 12.71
+      },
+      {
+        "date": "2026-08-24",
+        "posts": 0,
+        "views": 106,
+        "likes": 4,
+        "shares": 0,
+        "comments": 1,
+        "finish5s": 0.40590000000000004,
+        "bounce2s": 0.5743,
+        "coverCtr": 0.0,
+        "avgWatchSec": 12.36
+      },
+      {
+        "date": "2026-08-25",
+        "posts": 1,
+        "views": 477,
+        "likes": 7,
+        "shares": 0,
+        "comments": 0,
+        "finish5s": 0.2956,
+        "bounce2s": 0.4722,
+        "coverCtr": 0.6667000000000001,
+        "avgWatchSec": 8.06
+      },
+      {
+        "date": "2026-08-26",
+        "posts": 0,
+        "views": 338,
+        "likes": 7,
+        "shares": 2,
+        "comments": 0,
+        "finish5s": 0.3444,
+        "bounce2s": 0.4194,
+        "coverCtr": 0.0,
+        "avgWatchSec": 9.78
+      },
+      {
+        "date": "2026-08-27",
+        "posts": 1,
+        "views": 1027,
+        "likes": 20,
+        "shares": 3,
+        "comments": 2,
+        "finish5s": 0.4533,
+        "bounce2s": 0.3333,
+        "coverCtr": 0.6296,
+        "avgWatchSec": 9.8
+      },
+      {
+        "date": "2026-08-28",
+        "posts": 0,
+        "views": 1450,
+        "likes": 11,
+        "shares": 1,
+        "comments": 3,
+        "finish5s": 0.5231,
+        "bounce2s": 0.2669,
+        "coverCtr": 0.0741,
+        "avgWatchSec": 10.69
+      },
+      {
+        "date": "2026-08-29",
+        "posts": 1,
+        "views": 30183,
+        "likes": 472,
+        "shares": 117,
+        "comments": 28,
+        "finish5s": 0.5154,
+        "bounce2s": 0.3273,
+        "coverCtr": 0.6486,
+        "avgWatchSec": 13.31
+      },
+      {
+        "date": "2026-08-30",
+        "posts": 0,
+        "views": 13517,
+        "likes": 366,
+        "shares": 37,
+        "comments": 14,
+        "finish5s": 0.5125,
+        "bounce2s": 0.3287,
+        "coverCtr": 0.8033,
+        "avgWatchSec": 13.93
+      },
+      {
+        "date": "2026-08-31",
+        "posts": 1,
+        "views": 7460,
+        "likes": 201,
+        "shares": 26,
+        "comments": 8,
+        "finish5s": 0.3456,
+        "bounce2s": 0.37979999999999997,
+        "coverCtr": 0.3378,
+        "avgWatchSec": 10.5
+      }
+    ],
+    "9月数据": [
+      {
+        "date": "2026-09-01",
+        "posts": 0,
+        "views": 1586,
+        "likes": 35,
+        "shares": 6,
+        "comments": 7,
+        "finish5s": 0.48,
+        "bounce2s": 0.37920000000000004,
+        "coverCtr": 0.22219999999999998,
+        "avgWatchSec": 12.73
+      },
+      {
+        "date": "2026-09-02",
+        "posts": 1,
+        "views": 1492,
+        "likes": 29,
+        "shares": 5,
+        "comments": 0,
+        "finish5s": 0.2918,
+        "bounce2s": 0.49729999999999996,
+        "coverCtr": 0.2048,
+        "avgWatchSec": 8.53
+      },
+      {
+        "date": "2026-09-03",
+        "posts": 0,
+        "views": 725,
+        "likes": 12,
+        "shares": 4,
+        "comments": 1,
+        "finish5s": 0.2873,
+        "bounce2s": 0.43329999999999996,
+        "coverCtr": 0.44439999999999996,
+        "avgWatchSec": 7.72
+      }
+    ]
+  },
+  "jiangwei_shipinhao": {
+    "8月数据": [
+      {
+        "date": "2026-08-05",
+        "views": 664,
+        "recommend": 1,
+        "likes": 6,
+        "comments": 1,
+        "shares": 0,
+        "follows": 5
+      },
+      {
+        "date": "2026-08-06",
+        "views": 526,
+        "recommend": 2,
+        "likes": 2,
+        "comments": 0,
+        "shares": 1,
+        "follows": 1
+      },
+      {
+        "date": "2026-08-07",
+        "views": 510,
+        "recommend": 1,
+        "likes": 3,
+        "comments": 0,
+        "shares": 4,
+        "follows": 1
+      },
+      {
+        "date": "2026-08-08",
+        "views": 529,
+        "recommend": 3,
+        "likes": 1,
+        "comments": 0,
+        "shares": 3,
+        "follows": 4
+      },
+      {
+        "date": "2026-08-09",
+        "views": 313,
+        "recommend": 0,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "follows": 0
+      },
+      {
+        "date": "2026-08-10",
+        "views": 352,
+        "recommend": 0,
+        "likes": 0,
+        "comments": 0,
+        "shares": 1,
+        "follows": 1
+      },
+      {
+        "date": "2026-08-11",
+        "views": 526,
+        "recommend": 1,
+        "likes": 4,
+        "comments": 0,
+        "shares": 1,
+        "follows": 0
+      },
+      {
+        "date": "2026-08-12",
+        "views": 401,
+        "recommend": 0,
+        "likes": 0,
+        "comments": 1,
+        "shares": 1,
+        "follows": 0
+      },
+      {
+        "date": "2026-08-13",
+        "views": 378,
+        "recommend": 0,
+        "likes": 1,
+        "comments": 0,
+        "shares": 1,
+        "follows": 0
+      },
+      {
+        "date": "2026-08-14",
+        "views": 325,
+        "recommend": 0,
+        "likes": 3,
+        "comments": 0,
+        "shares": 0,
+        "follows": 1
+      },
+      {
+        "date": "2026-08-15",
+        "views": 378,
+        "recommend": 2,
+        "likes": 1,
+        "comments": 0,
+        "shares": 0,
+        "follows": 0
+      },
+      {
+        "date": "2026-08-16",
+        "views": 153,
+        "recommend": 0,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "follows": 0
+      },
+      {
+        "date": "2026-08-17",
+        "views": 312,
+        "recommend": 0,
+        "likes": 5,
+        "comments": 0,
+        "shares": 1,
+        "follows": 0
+      },
+      {
+        "date": "2026-08-18",
+        "views": 256,
+        "recommend": 0,
+        "likes": 1,
+        "comments": 0,
+        "shares": 1,
+        "follows": 0
+      },
+      {
+        "date": "2026-08-19",
+        "views": 333,
+        "recommend": 1,
+        "likes": 2,
+        "comments": 0,
+        "shares": 2,
+        "follows": 0
+      },
+      {
+        "date": "2026-08-20",
+        "views": 200,
+        "recommend": 0,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "follows": 0
+      },
+      {
+        "date": "2026-08-21",
+        "views": 424,
+        "recommend": 1,
+        "likes": 1,
+        "comments": 1,
+        "shares": 0,
+        "follows": 1
+      },
+      {
+        "date": "2026-08-22",
+        "views": 340,
+        "recommend": 0,
+        "likes": 4,
+        "comments": 2,
+        "shares": 1,
+        "follows": 0
+      },
+      {
+        "date": "2026-08-23",
+        "views": 625,
+        "recommend": 2,
+        "likes": 2,
+        "comments": 0,
+        "shares": 1,
+        "follows": 1
+      },
+      {
+        "date": "2026-08-24",
+        "views": 140,
+        "recommend": 0,
+        "likes": 4,
+        "comments": 0,
+        "shares": 0,
+        "follows": 1
+      },
+      {
+        "date": "2026-08-25",
+        "views": 265,
+        "recommend": 1,
+        "likes": 1,
+        "comments": 0,
+        "shares": 4,
+        "follows": 1
+      },
+      {
+        "date": "2026-08-26",
+        "views": 274,
+        "recommend": 0,
+        "likes": 1,
+        "comments": 0,
+        "shares": 3,
+        "follows": 0
+      },
+      {
+        "date": "2026-08-27",
+        "views": 788,
+        "recommend": 1,
+        "likes": 2,
+        "comments": 4,
+        "shares": 0,
+        "follows": 1
+      },
+      {
+        "date": "2026-08-28",
+        "views": 874,
+        "recommend": 0,
+        "likes": 2,
+        "comments": 0,
+        "shares": 1,
+        "follows": 1
+      },
+      {
+        "date": "2026-08-29",
+        "views": 890,
+        "recommend": 0,
+        "likes": 4,
+        "comments": 4,
+        "shares": 4,
+        "follows": 1
+      },
+      {
+        "date": "2026-08-30",
+        "views": 342,
+        "recommend": 1,
+        "likes": 1,
+        "comments": 0,
+        "shares": 0,
+        "follows": 1
+      },
+      {
+        "date": "2026-08-31",
+        "views": 352,
+        "recommend": 2,
+        "likes": 1,
+        "comments": 1,
+        "shares": 1,
+        "follows": 0
+      }
+    ],
+    "9月数据": [
+      {
+        "date": "2026-09-01",
+        "views": 324,
+        "recommend": 0,
+        "likes": 0,
+        "comments": 1,
+        "shares": 0,
+        "follows": 1
+      },
+      {
+        "date": "2026-09-02",
+        "views": 188,
+        "recommend": 0,
+        "likes": 0,
+        "comments": 0,
+        "shares": 1,
+        "follows": 0
+      },
+      {
+        "date": "2026-09-03",
+        "views": 364,
+        "recommend": 0,
+        "likes": 3,
+        "comments": 1,
+        "shares": 0,
+        "follows": 0
+      }
+    ]
+  }
+}
