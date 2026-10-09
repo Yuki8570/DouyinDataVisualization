@@ -263,9 +263,8 @@
 
   function isDailyState(state) {
     if (state && state.kind === "daily") return true;
-    if (state && String(state.platform || "").startsWith("jiangwei_")) return true;
-    const sample = state && state.posts && state.posts[0];
-    return !!(sample && sample.kind === "daily");
+    const posts = (state && state.posts) || [];
+    return posts.length > 0 && posts.every((p) => p.kind === "daily");
   }
 
   function engage(p) {
@@ -437,7 +436,10 @@
     const days = [...(state.posts || [])].sort((a, b) =>
       String(a.date).localeCompare(String(b.date))
     );
-    const isDy = state.platform === "jiangwei_douyin";
+    const isDy =
+      state.platform === "jiangwei_douyin" ||
+      state.platform === "douyin" ||
+      days.some((d) => d.finish5s != null && d.posts != null);
     if (!days.length) {
       root.innerHTML = `<div class="panel"><p style="color:var(--muted)">当前没有可展示的日数据。</p></div>`;
       return;
@@ -477,7 +479,7 @@
       <aside class="insight reveal">
         <div class="insight-mark">洞</div>
         <div>
-          <h2>江炜个人号 · ${isDy ? "抖音" : "视频号"}日数据</h2>
+          <h2>${state.platform === "jiangwei_douyin" || state.platform === "jiangwei_shipinhao" ? "江炜个人号" : "公司号"} · ${isDy ? "抖音" : "视频号"}日数据</h2>
           <p>
             ${days[0].date} 至 ${days[days.length - 1].date}，共 ${days.length} 天。
             峰值日 <strong>${peak.date}</strong> 播放 ${fmt(peak.views)}。

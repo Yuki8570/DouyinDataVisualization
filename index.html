@@ -55,8 +55,8 @@
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-  <script src="assets/default-data.js?v=20260904"></script>
-  <script src="assets/viz.js?v=20260904"></script>
+  <script src="assets/default-data.js?v=20261009"></script>
+  <script src="assets/viz.js?v=20261009"></script>
   <script>
     try { localStorage.removeItem("sunevo-dash-store-v1"); } catch (e) {}
     const state = {
@@ -208,7 +208,9 @@
         posts = state.sheets[state.activeSheet] || [];
       }
       state.posts = posts;
-      const unit = isJiangwei(state.platform) ? "天" : "条作品";
+      const allDaily = posts.length > 0 && posts.every((p) => p.kind === "daily");
+      state.kind = allDaily || isJiangwei(state.platform) ? "daily" : "works";
+      const unit = state.kind === "daily" ? "天" : "条作品";
       metaChips.innerHTML = `
         <span class="chip">${accountLabel(state.platform)}</span>
         <span class="chip"><strong>${state.activeSheet}</strong></span>
